@@ -11,14 +11,15 @@
   <body>
     <script type="text/javascript" src="./main.js"></script>
     <form
-    action="https://mate-academy-form-lesson.herokuapp.com/create-application"
-    method="POST"
-    autocomplete="off"
+      action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+      method="POST"
+      autocomplete="off"
+      onsubmit="OnSubmit()"
     >
       <fieldset class="fieldset personal-info">
         <legend>Personal information</legend>
 
-        <div class="form-field surname">
+        <div class="form-field">
           <label for="surname">Surname:</label>
           <input
           type="text"
@@ -28,7 +29,7 @@
           >
         </div>
 
-        <div class="form-field name">
+        <div class="form-field">
           <label for="name">Name:</label>
           <input
           type="text"
@@ -38,7 +39,7 @@
           >
         </div>
 
-        <div class="form-field age">
+        <div class="form-field">
           <label for="age">How old are You?</label>
           <input
           type="number"
@@ -51,7 +52,7 @@
           >
         </div>
 
-        <div class="form-field birth-date">
+        <div class="form-field">
           <label for="date-of-birth">Full date of birth:</label>
           <input
           type="date"
@@ -61,7 +62,7 @@
           >
         </div>
 
-        <div class="form-field agreement">
+        <div class="form-field">
           <label for="agreement">I accept the term of the agreement</label>
           <input
           type="checkbox"
@@ -72,10 +73,10 @@
         </div>
       </fieldset>
 
-      <fieldset class="fieldset registration">
+      <fieldset class="fieldset">
         <legend>Registration</legend>
 
-        <div class="form-field email">
+        <div class="form-field">
           <label for="email">E-mail:</label>
           <input
           type="email"
@@ -86,7 +87,7 @@
           >
         </div>
 
-        <div class="form-field password">
+        <div class="form-field">
           <label for="password">Password:</label>
           <input
           type="password"
@@ -97,10 +98,10 @@
         </div>
       </fieldset>
 
-      <fieldset class="fieldset interesting">
+      <fieldset class="fieldset">
         <legend>An interesting fact about you!</legend>
 
-        <div class="form-field cats">
+        <div class="form-field">
           Do you love cats?
           <label for="yes">Yes</label>
           <input
@@ -116,7 +117,7 @@
           >
         </div>
 
-        <div class="form-field fav-color">
+        <div class="form-field">
           <label for="color">What is your favotite color?</label>
           <input
           type="color"
@@ -125,7 +126,7 @@
           >
         </div>
 
-        <div class="form-field to-bed">
+        <div class="form-field">
           <label for="to-bed">What time do you go to bed?</label>
           <input
           type="time"
@@ -134,7 +135,7 @@
           >
         </div>
 
-        <div class="form-field fav-car-brand">
+        <div class="form-field">
           <label for="car-brand">What are your favorite brand of cars?</label>
           <select
           name="car-brand"
@@ -147,7 +148,7 @@
           </select>
         </div>
 
-        <div class="form-field rate-work">
+        <div class="form-field">
           <label for="rate-work">How do you rate our work?</label>
           <input
           type="range"
@@ -160,10 +161,10 @@
         </div>
       </fieldset>
 
-      <fieldset class="fieldset additional-info">
+      <fieldset class="fieldset">
         <legend>Additional info:</legend>
 
-        <div class="form-field comments">
+        <div class="form-field">
           <label for="comments">Comments:</label>
           <textarea
           name="comments"
@@ -173,7 +174,7 @@
          ></textarea>
         </div>
 
-        <div class="form-field recommend">
+        <div class="form-field">
           <label for="recommend">Would you recommend us?</label>
           <select name="recommend" id="recommend">
             <option value="yes">yes</option>
@@ -182,8 +183,7 @@
         </div>
       </fieldset>
 
-      <button type="submit" onsubmit="onSubmit()"
-      >
+      <button type="submit">
         Submit
       </button>
     </form>
